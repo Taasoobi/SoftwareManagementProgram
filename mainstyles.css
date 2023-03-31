@@ -1,6 +1,8 @@
 *{margin: 0;
     padding: 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 body{
     background-color: #242526;
@@ -16,7 +18,7 @@ button{
     border: 2px solid #000000;
     border-radius: 10px;
     background-color: #000000;
-    padding: 5px 32px;
+    padding: 5px 22px;
 }
 
 a{
@@ -25,10 +27,21 @@ a{
 }
 
 button:hover{
-    color: #ff00dd;
+    color: rgb(155, 59, 245);
     background-color: rgb(255, 255, 255);
-    border: 2px solid #ff00dd;
+    border: 2px solid rgb(155, 59, 245);
     cursor: pointer;
+}
+
+.listbtn{
+    background-color: rgb(155, 59, 245);display: flex; justify-content: center;height: 25px; border-bottom: 5px solid rgb(133, 3, 255);border-radius: 3px;
+}
+
+.listbtn:hover{
+    cursor: pointer;
+    color: rgb(155, 59, 245);
+    background-color: white;
+    border-color: rgb(196, 195, 195);
 }
 
 ul{
@@ -43,4 +56,15 @@ list-style-type: none;
 li{
     width: 16%;
     height: 25px;
+}
+
+.component{
+    width: 85%;
+    color: white;
+    display: flex; justify-content: center; align-items: center;
+    height: 70px;
+    background-color: rgb(155, 59, 245);
+    margin: 10px 10px 10px 10px;
+    border-bottom: 5px solid rgb(133, 3, 255);
+    border-radius: 15px;
 }
