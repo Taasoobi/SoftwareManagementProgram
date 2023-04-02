@@ -71,3 +71,43 @@ li{
     border-bottom: 5px solid rgb(133, 3, 255);
     border-radius: 15px;
 }
+
+.component:hover{
+    color: rgb(155, 59, 245);
+    background-color: white;
+    border-color: rgb(196, 195, 195);
+    cursor: pointer;
+}
+
+.plus{
+    position: absolute;
+    left: 17vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.plus:hover{
+    border-color: rgb(155, 59, 245);
+}
+
+.citem{
+    color: white;
+    width: 55%;
+    display: flex; justify-content: center; align-items: center;
+    height: 70px;
+    background-color: rgb(155, 59, 245);
+    margin: 10px 10px 10px 10px;
+    border-bottom: 5px solid rgb(133, 3, 255);
+    border-radius: 15px;
+}
+
+.citem:hover{
+    color: rgb(155, 59, 245);
+    background-color: white;
+    border-color: rgb(196, 195, 195);
+    cursor: pointer;
+}
