@@ -117,6 +117,7 @@ li{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0); /*scale 0 hides modal by default*/
+    transition: 200ms ease-in-out;
     border: 5px solid rgb(133, 3, 255);
     border-radius: 10px;
     z-index: 10;
@@ -145,6 +146,10 @@ li{
     background-color: rgb(155, 59, 245);
 }
 
+.modal-header .close-button {
+   cursor: pointer; 
+}
+
 .modal-body {
     padding: 10px;
 }
@@ -152,6 +157,7 @@ li{
 #overlay {
     position: fixed;
     opacity: 0;
+    transition: 200ms ease-in-out;
     top: 0;
     left: 0;
     right: 0;
