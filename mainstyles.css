@@ -13,6 +13,25 @@ h1{
     color: white;
 }
 
+.createItem{
+    background-color: rgb(155, 59, 245);
+    width: 300px;
+    border-bottom: 5px solid rgb(133, 3, 255);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+.createItem:hover{
+    color: rgb(155, 59, 245);
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    border-bottom: 5px solid rgb(136, 136, 136);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
 button{
     color: rgb(255, 255, 255);
     font-size: large;
@@ -20,6 +39,14 @@ button{
     border-radius: 10px;
     background-color: #000000;
     padding: 5px 22px;
+}
+
+#idBTN{
+    background-color: rgb(155, 59, 245);
+    font-size: medium;
+}
+#idBTN:hover{
+    background-color: white;
 }
 
 a{
@@ -122,7 +149,7 @@ li{
     border-radius: 10px;
     z-index: 10;
     background-color: rgb(0, 0, 0);
-    width: 500px;
+    width: 800px;
     max-width: 80%;
     color: white;
 }
@@ -152,6 +179,8 @@ li{
 
 .modal-body {
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 #overlay {
@@ -172,3 +201,29 @@ li{
     pointer-events: all;
     
 }
+
+/*Calendar widget CSS*/
+
+::-webkit-calendar-picker-indicator {
+    background-color: rgb(155, 59, 245);
+    color: #ffffff;
+  }
+  
+  /* Adjust font size of the datepicker */
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .formsubmitbtn {
+    background-color: rgb(155, 59, 245);
+    color: white;
+    border: 1px solid black;
+    padding: 5px; border-radius: 3px;
+  }
+
+  .formsubmitbtn:hover {
+    color: rgb(155, 59, 245);
+    background-color: white;
+    cursor: pointer;
+  }
