@@ -1,23 +1,19 @@
-/*
+
 const express = require('express');
 const router = express.Router();
-//const deliverableclass = require('../scripts/deliverable');
+const Deliverable = require('../scripts/deliverable.js');
+//import { Deliverable }from '../scripts/deliverable.js';
 
 router.post('/del', (req, res) =>{
     console.log("Post acquired");
-    const formdata = req.body;
-    const myObject = {
-        id: formdata.id,
-        name: formdata.name,
-        description: formdata.description,
-        duedate: formdata.duedate
-    }
+    const fodata = req.body;
+    console.log(fodata.id);
 
-    console.log(formdata);
-
-    //let newitem = new deliverableclass(id, name, description, duedate);
-    //newitem.display();
+    let newitem = new Deliverable(fodata.id, fodata.name, fodata.description, fodata.duedate);
+    newitem.display();
     
+    res.send("form data recieved");
+
     //res.status(200).end();
     //res.send('Success');
     //res.sendFile('/public/del.html');
@@ -25,4 +21,3 @@ router.post('/del', (req, res) =>{
 });
 
 module.exports = router;
-*/
