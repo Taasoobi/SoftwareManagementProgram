@@ -14,10 +14,6 @@ router.post('/del', (req, res) =>{
     
     res.send("form data recieved");
 
-    //res.status(200).end();
-    //res.send('Success');
-    //res.sendFile('/public/del.html');
-
 });
 
 module.exports = router;

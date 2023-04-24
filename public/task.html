@@ -45,16 +45,40 @@
         <div class="modal-body">
             <form id="myForm" action="/processtask/task" method="POST">
                 <div style="padding-bottom: 10px; display: flex; justify-content: center;"> <button type="button" id="idBTN">Generate ID #</button> </div>
-                <div><p>Unique ID: <span style="color: lawngreen;" id="idDisplay"> ID </span> </p></div><br>
+                <div><p>Unique ID: <span style="color: lawngreen;" id="idDisplay"> # </span> </p></div><br>
                 <input type="hidden" id="hiddenID" name="id">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name"><br><br>
                 <label for="description">Description:</label>
                 <input type="text" id="description" name="description"><br><br>
-                <label for="resourceassigned">Resrource Assigned:</label>
-                <input type="text" id="resourceassigned" name="resourceassigned">
-                <label for="duedate">Due Date:</label>
-                <input type="date" id="duedate" name="duedate">
+                <label for="resourceassigned">Resource Assigned:</label>
+                <input type="text" id="resourceassigned" name="resourceassigned"><br><br><!--resource items-->
+                <label for="duedate">Expected Start Date:</label>
+                <input type="date" id="expduedate" name="expduedate"><br><br>
+                <label for="expenddate">Expected End Date:</label>
+                <input type="date" id="expenddate" name="expenddate"><br><br>
+                <label for="expduration">Expected Duration</label>
+                <input type="text" id="expduration" name="expduration"><br><br><!--calculate expected duration-->
+                <label for="expeffort">Expected Effort</label>
+                <input type="text" id="expeffort" name="expeffort"><br><br>
+                <label for="actstartdate">Actual Start Date:</label>
+                <input type="date" id="actstartdate" name="actstartdate"><br><br>
+                <label for="actenddate">Actual End Date:</label>
+                <input type="date" id="actenddate" name="actenddate"><br><br>
+                <label for="actduration">Actual Duration:</label>
+                <input type="text" id="actduration" name="actduration"><br><br><!--calculate actual duration-->
+                <label for="effcompleted">Effort Completed:</label>
+                <input type="text" name="effcompleted" id="effcompleted"><br><br>
+                <label for="acteffort">Actual Effort:</label>
+                <input type="text" id="acteffort" name="acteffort"><br><br>
+                <label for="percomplete">Percentage Complete:</label>
+                <input type="text" id="percomplete" name="percomplete"><br><br><!--effort completed / expected effort-->
+                <label for="pretasks">Predecessor Tasks:</label>
+                <input type="text" id="pretasks" name="pretasks"><br><br>
+                <label for="suctasks">Successor Tasks:</label>
+                <input type="text" id="suctasks" name="suctasks"><br><br>
+                <label for="lisissues">List of Issues:</label>
+                <input type="text" id="lisissues" name="lisissues"><br><br><!--list of issues, Name+ID of issues -->
                 <div style="padding-bottom: 10px; padding-top: 10px;">List of Requirements (Non Functional):</div>
                 <div style="height: 20px; background-color: rgb(68, 68, 68); border-radius: 5px;"></div>
                 <div style="padding-bottom: 10px;">List of Tasks:</div>

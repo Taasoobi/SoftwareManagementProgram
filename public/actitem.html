@@ -46,20 +46,32 @@
         <div class="modal-body">
             <form id="myForm" action="/processactitem/actitem" method="POST">
                 <div style="padding-bottom: 10px; display: flex; justify-content: center;"> <button type="button" id="idBTN">Generate ID #</button> </div>
-                <div><p>Unique ID: <span style="color: lawngreen;" id="idDisplay"> ID </span> </p></div><br>
+                <div><p>Unique ID: <span style="color: lawngreen;" id="idDisplay"> # </span> </p></div><br>
                 <input type="hidden" id="hiddenID" name="id">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name"><br><br>
                 <label for="description">Description:</label>
                 <input type="text" id="description" name="description"><br><br>
-                <label for="duedate">Due Date:</label>
-                <input type="date" id="duedate" name="duedate">
-                <div style="padding-bottom: 10px; padding-top: 10px;">List of Requirements (Non Functional):</div>
-                <div style="height: 20px; background-color: rgb(68, 68, 68); border-radius: 5px;"></div>
-                <div style="padding-bottom: 10px;">List of Tasks:</div>
-                <div style="margin-bottom: 10px;height: 20px; background-color: rgb(68, 68, 68); border-radius: 5px;"></div>
-                <div style="display: flex; justify-content: center;"></div>
-                <input class="formsubmitbtn" type="submit" value="Submit">
+                <label for="datecreate">Date Created:</label>
+                <input type="date" id="datecreate" name="datecreate"><br><br>
+                <label for="dateassign">Date Assigned:</label>
+                <input type="date" id="dateassign" name="dateassign"><br><br>
+                <label for="resassign">Resource Assigned:</label>
+                <input type="text" id="ressassign" name="resassign"><br><br>
+                <label for="excomdate">Expected Completion Date:</label>
+                <input type="date" name="excomdate" id="excomdate"><br><br>
+                <label for="accomdate">Actual Completion Date:</label>
+                <input type="date" id="accomdate" name="accomdate"><br><br>
+                <label >Set Status:</label><br>
+                <label >Status:</label><br>
+                <label for="statdesc">Status Description:</label>
+                <input type="text" id="statdesc" name="statdesc"><br><br>
+                <label for="upddate">Update Date:</label>
+                <input type="date" name="upddate" id="upddate"><br><br>
+                <div style="display: flex; justify-content: center;">
+                    <input class="formsubmitbtn" type="submit" value="Submit">
+                </div>
+                
               </form>
         </div>
     </div>
