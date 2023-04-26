@@ -10,7 +10,7 @@ idBTN.addEventListener("click", () => {
 });
 
 form.addEventListener("submit", async (event) => {
-  console.log("form Submitted");
+  console.log("form Submitted: Message from Line 13 of id.js");
   event.preventDefault();
   const formData = new FormData(form); // get form data
   //console.log(JSON.stringify(formData));
@@ -21,7 +21,7 @@ form.addEventListener("submit", async (event) => {
     duedate: formData.get("duedate"),
   };
 
-  const response = await fetch("/processitem/del", {
+  const response = await fetch("/processDeliverable/del", {
     // send form data using fetch
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -31,7 +31,7 @@ form.addEventListener("submit", async (event) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-      console.log("Form submitted successfully");
+      console.log("Form submitted successfully: Message From Fetch API function");
       form.reset();
       idDisplay.textContent = "";
       hiddenID.value = "";

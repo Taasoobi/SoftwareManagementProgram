@@ -5,7 +5,7 @@ const Deliverable = require('../scripts/deliverable.js');
 //import { Deliverable }from '../scripts/deliverable.js';
 
 router.post('/del', (req, res) =>{
-    console.log("Post acquired");
+    console.log("Post acquired: Message from DeliverableRoute.js");
     const fodata = req.body;
     console.log(fodata.id);
 

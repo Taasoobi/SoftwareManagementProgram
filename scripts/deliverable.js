@@ -7,6 +7,7 @@ class Deliverable {
         this.desc = desc;
         this.dueDate = dueDate;
     }
+    
     display(){
         console.log("Beginning");
         console.log(Deliverable);
