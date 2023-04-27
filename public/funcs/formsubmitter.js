@@ -36,13 +36,17 @@
   
     const formData = new FormData(form); // get form data
     //console.log(JSON.stringify(formData));
+    /*
     const data = {
         id: formData.get("id"),
         name: formData.get("name"),
         description: formData.get("description"),
         duedate: formData.get("duedate"),
     };
-    
+    */
+    const data = {};
+    formData.forEach((value, key) => data[key] = value);
+
     const response = await fetch(fetchinput, {
       // send form data using fetch
       method: "POST",
