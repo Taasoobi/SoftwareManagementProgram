@@ -12,7 +12,9 @@ router.post('/del', (req, res) =>{
 
     let newitem = new Deliverable(fodata.id, fodata.name, fodata.description, fodata.duedate);
     newitem.display();
-    
+    //newitem.pushtoJSON(fodata);
+    newitem.pushtoJSON(newitem);
+
     res.send("form data recieved");
 
 });

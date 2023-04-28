@@ -22,13 +22,13 @@ class Deliverable {
     pushtoJSON(input){
         const fs = require('fs');
         // Read the existing data from the file
-        const data = fs.readFileSync('data.json', 'utf-8');
+        const data = fs.readFileSync('data/del.json', 'utf-8');
         // Parse the data into a JavaScript object
         const parsedData = JSON.parse(data);
         // Add a new object to the array
         parsedData.push(input);
         // Write the updated data back to the file
-        fs.writeFileSync('data.json', JSON.stringify(parsedData));
+        fs.writeFileSync('data/del.json', JSON.stringify(parsedData));
         }
 
 };
