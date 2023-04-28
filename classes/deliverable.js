@@ -16,6 +16,7 @@ class Deliverable {
         console.log(this.desc);
         console.log(this.dueDate);
         console.log("End");
+        console.log(this);
     }
 
     pushtoJSON(input){
