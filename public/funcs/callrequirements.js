@@ -44,5 +44,3 @@ jsonpusher(parseData);
 
 console.log('Data after function');
 console.log(d);
-
-

@@ -7,5 +7,3 @@ idBTN.addEventListener("click", () => {
   idDisplay.textContent = id;
   hiddenID.value = id;
 });
-
-

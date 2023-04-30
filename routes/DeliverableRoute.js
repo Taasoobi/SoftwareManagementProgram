@@ -11,9 +11,9 @@ router.post('/del', (req, res) =>{
     console.log(fodata);
 
     let newitem = new Deliverable(fodata.id, fodata.name, fodata.description, fodata.duedate);
-    newitem.display();
-    //newitem.pushtoJSON(fodata);
-    newitem.pushtoJSON(newitem);
+    //newitem.display();
+    //newitem.pushtoJSON(fodata); ignore for now
+    //newitem.pushtoJSON(newitem);
 
     res.send("form data recieved");
 

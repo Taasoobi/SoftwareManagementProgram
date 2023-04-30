@@ -44,6 +44,7 @@
         duedate: formData.get("duedate"),
     };
     */
+    
     const data = {};
     formData.forEach((value, key) => data[key] = value);
 
@@ -66,5 +67,3 @@
         console.error("Error submitting form:", error);
       });
   });
-
-

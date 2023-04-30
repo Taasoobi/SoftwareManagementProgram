@@ -6,18 +6,6 @@ app.use(express.static('public'));
 //app.use(express.urlencoded({ extended: true })); did not work with json data? Maybe data that is recieved is utf?
 app.use(express.json()); //seems to work with json data
 
-/*
-app.post('/processitem/del', (req, res) => {
-    //console.log(req);
-    const {id, name} = req.body;
-    const formData = req.body;
-    const dataname = req.body.name;
-    console.log(formData.id+ " + " +dataname);
-    console.log({id, name});
-    res.send("form data recieved");
-});
-*/
-
 const deliverableRouter = require('./routes/DeliverableRoute');
 app.use('/processDeliverable', deliverableRouter);
 
