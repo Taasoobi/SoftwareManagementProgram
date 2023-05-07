@@ -1,11 +1,12 @@
 //ctrl+shift+p/ to open command
 
 class Deliverable {
-    constructor(id, name, desc, dueDate){
+    constructor(id, name, desc, dueDate, requirelist){
         this.id = id;
         this.name = name;
         this.desc = desc;
         this.dueDate = dueDate;
+        this.requirelist = requirelist;
     }
     
     display(){
@@ -15,6 +16,7 @@ class Deliverable {
         console.log(this.name);
         console.log(this.desc);
         console.log(this.dueDate);
+        console.log(this.requirelist);
         console.log("End");
         console.log(this);
     }
