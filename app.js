@@ -24,6 +24,21 @@ app.use('/processreso', resourceRouter);
 const decisionRouter = require('./routes/DecisionRoute');
 app.use('/processdec', decisionRouter);
 
+
+const fs = require('fs');
+app.get('/retrieveData', (req, res) => {
+    const readDataFile = fs.readFileSync('data/reqnonfunc.json', 'utf-8', (error) =>{
+        if(error){
+            console.log(error);
+            return;
+        }    
+      });
+      let parsedData = JSON.parse(readDataFile);
+      //let strungData = JSON.stringify(parsedData);
+      res.json(parsedData);
+
+});
+
 app.listen(3000, () =>{console.log('Server is listening on Port 3000');} );
 
 //app.use('/', express.static(__dirname + '/public')); works, but __dirname is not necessary though

@@ -21,7 +21,63 @@ for(let i = 0; i<parsedData.length; i++){
   console.log(parsedData[i]);
 }
 */
+console.log("loadreq Commenced");
 
+//'/funcs/data/reqnonfunc.json'
+/*
+let parsedData = await fetch('/retrieveData')
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+  for(let i = 0; i<data.length; i++){
+    console.log(`Here is parsed item number ${i}: ` + data[i]);
+  }  
+})
+*/
+/*
+async function fetchRequirements(){
+  try{
+      let parsedData = await fetch('/retrieveData')
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      for(let i = 0; i<data.length; i++){
+        console.log(`Here is parsed item number ${i}: ` + data[i]);
+      }  
+    })
+  } catch (error) {
+    console.error(error);
+  }
+
+}
+
+fetchRequirements();*/
+async function fetchRequirements() {
+  try {
+    const response = await fetch('/retrieveData');
+    const parsedData = await response.json();
+    //console.log("Here is parsed Data: ");
+    console.log(parsedData);
+    /*for (let i = 0; i < parsedData.length; i++) {
+      console.log(`Here is parsed item number ${i}: ` + parsedData[i]);
+    }
+    console.log("End of Fetch");*/
+    return parsedData;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+const parsedData = await fetchRequirements();
+
+console.log("Part 2: Here is parsed Data: ");
+console.log(parsedData[2].reqname);
+
+for(let i = 0; i<parsedData.length; i++){
+  console.log(`Here is reqitem from ${i}: ${parsedData[i].reqname} `);
+}
+
+console.log("End of Fetch");
 
 // Initialize array to hold chosen requirements
 let chosenRequirements = [];

@@ -1,8 +1,8 @@
-//const fs = require('fs');
+const fs = require('fs');
 //import * as fs from 'fs'; 
 
 //const { response } = require("express");
-
+/*
 console.log("loadreq Commenced");
 
 await fetch('reqnonfunc.json')
@@ -11,11 +11,11 @@ await fetch('reqnonfunc.json')
 
 
 console.log("End of Fetch");
+*/
 
 
 
-/*
-const readDataFile = fs.readFileSync('./data/reqnonfunc.json', 'utf-8', (error) =>{
+const readDataFile = fs.readFileSync('data/reqnonfunc.json', 'utf-8', (error) =>{
   if(error){
       console.log(error);
       return;
@@ -35,6 +35,6 @@ console.log("Below is for loop");
 for(let i = 0; i<parsedData.length; i++){
   console.log(parsedData[i]);
 }
-*/
+
 
 
