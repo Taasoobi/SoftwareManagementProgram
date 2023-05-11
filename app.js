@@ -39,6 +39,17 @@ app.get('/retrieveData', (req, res) => {
 
 });
 
+app.get('/retrieveSkills', (req, res) => {
+    const readSkillFile = fs.readFileSync('data/Skills.json', 'utf-8', (error) => {
+        if(error){
+            console.log(error);
+            return;
+        }
+    });
+    let parsedData = JSON.parse(readSkillFile);
+    res.json(parsedData);
+});
+
 app.listen(3000, () =>{console.log('Server is listening on Port 3000');} );
 
 //app.use('/', express.static(__dirname + '/public')); works, but __dirname is not necessary though
