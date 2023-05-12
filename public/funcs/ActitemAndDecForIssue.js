@@ -1,44 +1,43 @@
-
-async function getMeetNote(){
-    let getJSON = await fetch('/retrieveMeetNote');
+async function getAIitems(){
+    let getJSON = await fetch('/processactitem/getActJson');
     let parsedData = await getJSON.json();
     return parsedData;
 }
 
-async function getRefDoc(){
-    let getJSON = await fetch('/retrieveRefDocs');
+async function getDecitems(){
+    let getJSON = await fetch('/processdec/getDecJson');
     let parsedData = await getJSON.json();
     return parsedData;
 }
 
-const MeetNotes = await getMeetNote();
-const RefDocs = await getRefDoc();
-const noteBox = document.getElementById('NoteBox');
-const refDocBox = document.getElementById('RefDocBox');
+const actionItems = await getAIitems();
+const decItems = await getDecitems();
+const noteBox = document.getElementById('AIBox');
+const refDocBox = document.getElementById('DecBox');
 let noteBoxList = [];
 let refDocList = [];
 
 
-for(let i = 0; i<MeetNotes.length; i++){
-    console.log(MeetNotes[i]);
+for(let i = 0; i<actionItems.length; i++){
+    console.log(actionItems[i]);
     let notespan = document.createElement('span');
-    notespan.innerHTML = MeetNotes[i];
+    notespan.innerHTML = actionItems[i].name;
     notespan.className = "notetag";
     noteBox.appendChild(notespan);
 }
 
-for(let i = 0; i<RefDocs.length; i++){
-    console.log(RefDocs[i]);
+for(let i = 0; i<decItems.length; i++){
+    console.log(decItems[i]);
     let docspan = document.createElement('span');
-    docspan.innerHTML = RefDocs[i];
+    docspan.innerHTML = decItems[i].name;
     docspan.className = "doctag";
     refDocBox.appendChild(docspan);
 }
 
 const notetags = document.querySelectorAll('.notetag');
 const doctags = document.querySelectorAll('.doctag');
-const noteInputfromForm = document.getElementById('meetNote');
-const docInputfromForm = document.getElementById('refNote');
+const noteInputfromForm = document.getElementById('AINote');
+const docInputfromForm = document.getElementById('DecNote');
 
 
 notetags.forEach(function(tag){
@@ -96,4 +95,3 @@ notetags.forEach(function(tag){
       }
     });
   });
-

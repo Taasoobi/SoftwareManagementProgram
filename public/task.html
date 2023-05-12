@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,200"/>
     <script defer src="./funcs/modal.js"></script>
     <script defer src="./funcs/ids.js"></script>
+    
+    <script defer type="module" src="./funcs/PredSuccIssue.js"></script>
     <script defer type="module" src="./funcs/resourceForTask.js"></script>
+    <script defer type="module" src="./funcs/getTaskJson.js"></script>
+
     <script defer src="./funcs/formsubmitter.js"></script>
     <title>Document</title>
 </head>
@@ -117,6 +121,11 @@
                 <div style="background: grey;" class="avareqtags" id="IssueBox"></div><br><br>
                 <input type="hidden" name="issue(s)" id="issueInput"><!--list of issues, Name+ID of issues -->
                 
+                <!--
+                <input type="hidden" name="predTasks" id="predTaskInput">
+                <input type="hidden" name="succTasks" id="succTaskInput">
+                <input type="hidden" name="issueList" id="issueInput">
+                -->
                 <!--
                 <div style="padding-bottom: 10px;">List of Issues:</div>
                 <div style="background: grey;" class="avareqtags" id="ResourceBox"></div><br><br>
