@@ -284,6 +284,31 @@ li{
     background-color: purple;
   }
 
+  .reqtag.selected{
+    background-color: greenyellow;
+    color: black;
+  }
+
+  .doctag {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: #242526;
+    cursor: pointer;
+  }
+
+  .doctag:hover {
+    background-color: purple;
+  }
+
+  .doctag.selected {
+    background-color: greenyellow;
+    color: black;
+  }
+
   .listheader {
     box-sizing: border-box;
     padding: 5px 10px 10px 10px;

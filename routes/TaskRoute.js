@@ -7,6 +7,16 @@ router.post('/task', (req, res)=>{
     const fdata = req.body;
     console.log(fdata);
 
+    const readDataFile = fs.readFileSync('data/tas.json', 'utf-8', (error) =>{
+        if(error){
+            console.log(error);
+            return;
+        }    
+      });
+    let parsedData = JSON.parse(readDataFile);
+    parsedData.push(fdata);
+    fs.writeFileSync('data/tas.json', JSON.stringify(parsedData));
+
     console.log('Successful Task Route');
     res.send("Task Post acquired: Message from: TaskRoute.js line 5");
 });

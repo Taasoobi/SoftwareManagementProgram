@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,200"/>
     <script defer src="./funcs/modal.js"></script>
     <script defer src="./funcs/ids.js"></script>
+    <script defer type="module" src="./funcs/NoteAndDoc.js"></script>
+    <script defer type="module" src="./funcs/resourceForTask.js"></script>
+    <script defer type="module" src="./funcs/getDecisionJson.js"></script>
     <script defer src="./funcs/formsubmitter.js"></script>
     <title>Document</title>
 </head>
@@ -94,21 +97,32 @@
                 <input type="date" name="dateneed" id="dateneed"><br><br>
                 <label for="datemade">Date Made:</label>
                 <input type="date" name="datemade" id="datemade"><br><br>
-                <label for="decmaker">Decicision Maker:</label>
-                <input type="hidden" id="decmaker" name="decmaker"><br><br>
+                
+                
+                <!--<label for="decmaker">Decicision Maker:</label>
+                <input type="hidden" id="decmaker" name="decmaker"><br><br>-->
+                <div style="padding-bottom: 10px; padding-top: 10px;">Decision Maker:</div>
+                <div style="background: grey;" class="avareqtags" id="ResourceBox"></div><br><br>
+                <input type="hidden" name="resource(s)" id="resourceInput">
+                
                 <label for="excomdate">Expected Completion Date:</label>
                 <input type="date" name="excomdate" id="excomdate"><br><br>
                 <label for="accomdate">Actual Completion Date:</label>
                 <input type="date" name="accomdate" id="accomdate"><br><br>
 
                 <div style="padding-bottom: 10px; padding-top: 10px;">List of Meeting Notes:</div>
-                <div style="height: 20px; background-color: rgb(68, 68, 68); border-radius: 5px;"></div>
+                <div style="background: grey;" class="avareqtags" id="NoteBox"></div><br><br>
 
                 <label for="notedate">NoteDate</label>
-                <input type="hidden" id="notedate" name="notedate"><br><br>
+                <input type="date" id="notedate" name="notedate"><br><br>
 
                 <div style="padding-bottom: 10px;">List of Reference Documents:</div>
-                <div style="margin-bottom: 10px;height: 20px; background-color: rgb(68, 68, 68); border-radius: 5px;"></div>
+                <div style="background: grey;" class="avareqtags" id="RefDocBox"></div><br><br>
+
+                <!--Hidden Inputs-->
+                <input id="meetNote" type="hidden" name="meetNotelist">
+                <input id="refNote" type="hidden" name="refDoclist">
+
                 
                 <label for="status">Status:</label>
                 <select name="status" id="status">
@@ -123,7 +137,7 @@
                 <input type="text" name="statdesc" id="statdesc"><br><br>
 
                 <label for="upddate">Update Date:</label>
-                <input type="hidden" id="upddate" name="upddate"><br><br>
+                <input type="date" id="upddate" name="upddate"><br><br>
 
                 <div style="display: flex; justify-content: center;">
                     <input class="formsubmitbtn" type="submit" value="Submit">

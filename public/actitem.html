@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,200"/>
     <script defer src="./funcs/modal.js"></script>
     <script defer src="./funcs/ids.js"></script>
+    <script defer type="module" src="./funcs/resourceForTask.js"></script>
     <script defer src="./funcs/formsubmitter.js"></script>
     <p></p>
     <title>Document</title>
@@ -77,14 +78,28 @@
                 <input type="date" id="datecreate" name="datecreate"><br><br>
                 <label for="dateassign">Date Assigned:</label>
                 <input type="date" id="dateassign" name="dateassign"><br><br>
-                <label for="resassign">Resource Assigned:</label>
-                <input type="text" id="ressassign" name="resassign"><br><br>
+                
+
+                <!--<label for="resassign">Resource Assigned:</label>
+                <input type="text" id="ressassign" name="resassign"><br><br>-->
+                <div style="padding-bottom: 10px; padding-top: 10px;">Resource Assigned:</div>
+                <div style="background: grey;" class="avareqtags" id="ResourceBox"></div><br><br>
+                <input type="hidden" name="resource(s)" id="resourceInput">
+                
                 <label for="excomdate">Expected Completion Date:</label>
                 <input type="date" name="excomdate" id="excomdate"><br><br>
                 <label for="accomdate">Actual Completion Date:</label>
                 <input type="date" id="accomdate" name="accomdate"><br><br>
-                <label >Set Status:</label><br>
-                <label >Status:</label><br>
+                
+                <label for="status">Status:</label>
+                <select name="status" id="status">
+                    <option value="open">Open</option>
+                    <option value="closed">Closed</option>
+                    <option value="in progress">In Progress</option>
+                    <option value="hold">Hold</option>
+                    <option value="complete">Complete</option>
+                </select><br><br>
+                
                 <label for="statdesc">Status Description:</label>
                 <input type="text" id="statdesc" name="statdesc"><br><br>
                 <label for="upddate">Update Date:</label>

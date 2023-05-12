@@ -7,6 +7,16 @@ router.post('/iss', (req, res) => {
     const fdata = req.body;
     console.log(fdata);
 
+    const readDataFile = fs.readFileSync('data/iss.json', 'utf-8', (error) =>{
+        if(error){
+            console.log(error);
+            return;
+        }    
+      });
+    let parsedData = JSON.parse(readDataFile);
+    parsedData.push(fdata);
+    fs.writeFileSync('data/iss.json', JSON.stringify(parsedData));
+
     console.log("post issue: Issue Route.js");
     res.send("issue posted: Message from IssueRoutejs:(7)");
 });

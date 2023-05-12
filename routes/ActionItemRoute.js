@@ -7,6 +7,16 @@ router.post('/actitem', (req, res)=>{
     const fdata = req.body;
     console.log(fdata);
 
+    const readDataFile = fs.readFileSync('data/act.json', 'utf-8', (error) =>{
+        if(error){
+            console.log(error);
+            return;
+        }    
+      });
+    let parsedData = JSON.parse(readDataFile);
+    parsedData.push(fdata);
+    fs.writeFileSync('data/act.json', JSON.stringify(parsedData));
+
     console.log("action item post successful: Action ItemRoute.js");
     res.send("Post from Action Item Route.js: Successful(line 7)");
 });
