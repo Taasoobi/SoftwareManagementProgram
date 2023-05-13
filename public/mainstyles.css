@@ -440,6 +440,12 @@ li{
     color: white;
     background-color: rgb(155, 59, 245);
   }
+
+  .tableItemDiv:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(155, 59, 245);
+    cursor: pointer;
+  }
   
   .innerDiv {
     padding: 5px;
@@ -459,3 +465,20 @@ li{
     position: relative;
     bottom: 5px;
   }
+
+  .details {
+    background-color: rebeccapurple;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    display: none;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  

@@ -13,6 +13,7 @@
     <script type="module" defer src="./funcs/tags.js"></script>
     <script type="module" defer src="./funcs/formsubmitter.js"></script>
     <script type="module" defer src="./funcs/getDeliverableJson.js"></script>
+    <!--<script type="module" defer src="./funcs/deleteButton.js"></script>-->
     <title>Document</title>
 </head>
 <body>
@@ -48,6 +49,8 @@
         <div id="tableDiv" style="overflow: hidden; overflow-y: scroll; box-sizing: border-box; padding: 5px 10px 10px 10px; height: 60vh; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;background-color: rgb(34, 34, 34); margin-left: 40px; margin-right: 40px;">
             <!--component start-->
             <!--
+            <div class="itemContainer" onclick="toggleDetails(this)">
+                
             <div style="border-radius: 15px;box-sizing: border-box; padding: 10px; padding-left: 15px; padding-right: 15px; font-size:larger; display: flex; justify-content: space-between; color: white; background-color: rgb(155, 59, 245);">
                 <div class="innerDiv">EK13BN51</div>
                 <div class="innerDiv">Create The Fetch API</div>
@@ -55,7 +58,54 @@
                     <button title="Delete" class="deletebtn">X</button>
                 </div>
             </div>
-                -->
+            <div class="details" style="background-color: plum; color: white; margin-left: 10px; margin-right: 10px;">
+                <p>Description</p>
+                <p>Due Date:</p>
+                <p>Requirements:</p>
+                <p>Tasks:</p>
+            </div>
+        
+            </div>
+            <div class="ultracontainer" style="display: flex; justify-content: center;width: 100%;"> 
+                <div class="itemContainer" style="width: 100%;" onclick="toggleDetails(this)">
+                
+                    <div class="tableItemDiv" >
+                        <div class="innerDiv">EK13BN51</div>
+                        <div class="innerDiv">Create The Fetch API</div>
+                        <div class="innerDiv">
+                            
+                        </div>
+                    </div>
+                    <div class="details" style="background-color: plum; color: white; margin-left: 10px; margin-right: 10px;">
+                        <p>Description</p>
+                        <p>Due Date:</p>
+                        <p>Requirements:</p>
+                        <p>Tasks:</p>
+                    </div>
+                        
+                </div>
+
+                <div>
+                    <div class="innerDiv">
+                        <button title="Delete" class="deletebtn">X</button>
+                    </div>
+                </div>
+
+            </div>
+        -->
+            
+            <!--
+            <script>
+                function toggleDetails(container) {
+                    const details = container.querySelector(".details");
+                    if (details.style.display === "none") {
+                        details.style.display = "block";
+                    } else {
+                        details.style.display = "none";
+                    }
+                }
+                </script>
+            -->
             <!--component end-->
         
         </div>
@@ -93,7 +143,7 @@
 
                 <div style="padding-bottom: 10px; padding-top: 10px;">List of Tasks:</div>
                 <div style="background: grey;" class="avareqtags" id="TaskBox"></div><br><br>
-                <input type="hidden" name="Task(s)" id="taskInput">
+                <input type="hidden" name="taskInput" id="taskInput">
 
                 <div style="display: flex; justify-content: center;"></div>
                 <input class="formsubmitbtn" type="submit" value="Submit">
